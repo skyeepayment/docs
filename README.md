@@ -94,9 +94,9 @@ sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Refere
     * Parameter names are case-sensitive;
     * When checking returned data or a Skyee push notification signature, the transferred sign parameter is excluded in this signature as it is compared with the created signature.
 
-2. Perform SHA1 arithmetic on stringA,  thus get sign's value (signValue).
+2. Perform SHA1 arithmetic on string A,  thus get sign's value (signValue).
 
-    Example:
+    ```Example
 
     For the following transferred parameters:
 
@@ -111,14 +111,18 @@ sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Refere
     productId: 10000 <br>
     notificationUrl: https://merchant.com
 
+    ```
+
     a. Sort ASCII code of parameter names by lexicographical sequence based on the format of "key=value"
+
+    ```csharp
+    string A="amt1=1023111&amt2=9484213&appId=10000100&c1=GBP&c2=CNY&merchantId=1000000000&notificationUrl=https://merchant.com&orderId=12345-12345767-12345677&orderTime=15583942134&productId=10000";
     ```
-    stringA="amt1=1023111&amt2=9484213&appId=10000100&c1=GBP&c2=CNY&merchantId=1000000000&notificationUrl=https://merchant.com&orderId=12345-12345767-12345677&orderTime=15583942134&productId=10000";
-    ```
+
     b. The merchant sign the signature string using the merchant's RSA private key
 
-```C#
-    // C# Sample Code
+```csharp
+
     var dic = new Dictionary<string, string>()
     {
         { "merchantId", "1000000000" },
@@ -170,16 +174,13 @@ sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Refere
     Notes:
 
     * Sort parameter names in ascending alphabetical order based on their ASCII encoded names (e.g. lexicographical sequence);
-
     * Empty parameter values are excluded in the signature;
-
     * Parameter names are case-sensitive;
-
     * When Skyee push notification signature, the transferred sign parameter is excluded in this signature as it is compared with the created signature.
 
-2. Perform SHA1 arithmetic on stringA,  thus get sign's value (signValue).
+2. Perform SHA1 arithmetic on string A,  thus get sign's value (signValue).
 
-    Example:
+    ```Example
 
     For the following transferred parameters:
 
@@ -197,19 +198,23 @@ sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Refere
     errorCode : <br>
     sign: CzSlJ6X4nPsP5p36PQYf51a9OJRK6+V65kFwuD4wxeRdeoJZensPCD0YBB3uUlSphbR1RXACfSMXy9nfanbmh8n+dk8mUJiN2G4+Xwd0/HuYQqv9jUMMJT4UkfWO9CARlDrF4dUHDV4U7d4dcb4HjbRFeHyPbK2utWlHGQ1HsjJ6nupW2kxWIZ6MOVu0V5E+OUO1A5qMbjvIm8Etx5nEW/3v+qkH19S66FwjP0bh9HfYBGmA64YZHbc4W+3R5OF16EvGOm8sXNyF+9+IxUmbWrJ/a5GP6y8wvI6b7TZorjD1ss41Xuvuow0dtdwbXZn8ZPHcyxz2bdssh5ha9UEP7g==
 
+    ```
+
     a. Sort ASCII code of parameter names by lexicographical sequence based on the format of "key=value"
+
+    ```csharp
+    string A="amt1=1023111&amt2=9484213&appId=10000100&c1=GBP&c2=CNY&merchantId=1000000000&orderId=12345-12345767-12345677&orderStatus=Paid&orderTime=15583942134&payType=BankTransfer&productId=10000";
     ```
-    stringA="amt1=1023111&amt2=9484213&appId=10000100&c1=GBP&c2=CNY&merchantId=1000000000&orderId=12345-12345767-12345677&orderStatus=Paid&orderTime=15583942134&payType=BankTransfer&productId=10000";
-    ```
+
     b. The merchant verify the signature string using the Skyee's RSA public key
-    
-    Environment | Public key 
-    --------- | ------- 
+
+    Environment | Public key
+    --------- | -------
     Sandbox | -
     Production | [Download Skyee Public Key](https://pay.skyeepayment.com/files/publickey)
 
-```
-    // C# Sample Code
+```csharp
+
 using RSAExtensions;
 
     var dic = new Dictionary<string, string>()

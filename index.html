@@ -9,7 +9,20 @@
     <meta name="description" content="Description">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+
+    <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
+
+    <!-- Custom theme styles -->
+    <style>
+        :root {
+            --base-font-size: 14px;
+            --cover-background-color: #0081C9;
+            --cover-blockquote-color: #fff;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -22,12 +35,19 @@
             auto2top: true,
             logo: "_media/logo-blue.png",
             coverpage: true,
+            themeable: {
+                readyTransition: true, // default
+                responsiveTables: true  // default
+            }
             // loadNavbar: true,
             // loadSidebar: true,
 
         }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1.x/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1.x/components/prism-csharp.min.js"></script>
+
 </body>
 
 </html>
