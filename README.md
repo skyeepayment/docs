@@ -4,7 +4,7 @@
 
 ## Quick start
 
-If you intend to integrate Skyee's collection service into your website,you will need to do the following steps:
+If you intend to integrate Skyee's collection service into your website, you will need to do the following steps:
 
 * Acquire a merchantId from Skyee's account manager.
 * Acquire an appId from Skyee's account manager.
@@ -19,17 +19,19 @@ If you intend to integrate Skyee's collection service into your website,you will
 ```
 2. Within the Skyee hosted web page, Skyee will display the following information to the payer:
 
+    * Merchant name so the payer will confirm the genuinty of the payment page
     * OrderId from the merchant
     * Payment amount in its original currency
     * Payment amount to be collected in CNY format
-    * Time the order was created
+    * Time the order was created (GMT+8)
 
-
-> The payer will be asked to provide all necessary information on the page and submit all files.
+> The payer will be asked to provide all necessary information on the page and submit all files used for CNY crossborder.
 
 3. Once everything submitted, Skyee will display the account detail which can serve as the payee account for the payer transfer fund to. As this is an offline bank transfer, Skyee will also generate and display a PIN code which the payer MUST put together with the transfer in the comment or note field, for Skyee to identify the payment. A Unique Pin code will be associated with an order from the merchant and the PIN code will expire in 48 hours, which should be enough for the payer to complete the bank transfer.
 
 ### Parameter Details
+
+You already see the link format as below:
 
 ```
 https://pay.skyeepayment.com/web/pay?merchantId=123&appId=984342&orderId=12345-12345767-12345677&orderTime=15583942134&c1=GBP&c2=CNY&amt1=1023111&amt2=9484213&productId=10000&notificationUrl=https://merchant.com&sign=URgwbxHfL%2FE3YNiIBpP0vbL1UPtvbsqfAvGMpLFo5nIW2Bq786Mi0uLrvsI
@@ -53,7 +55,7 @@ sign | string |  `required` <br>Signature encrypted using RSA(SHA1WithRSA) s
 
 ### Notification
 
-Skyee needs a URL endpoint which Skyee could send payment notification to. It’s a POST request to inform the merchant of the payment status, a code sample would be like following:
+Skyee needs a URL endpoint which Skyee could send payment notification to. It’s a POST request to inform the merchant of the payment status, a request sample would be like following:
 
 ```Shell
 
@@ -85,7 +87,9 @@ sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Refere
 
 ### Create a signature
 
-1. Presume all data sent  is the set M. Sort non-empty values in M in ascending alphabetical order (i.e. lexicographical sequence), and join them into string A via the corresponding URL key-value format (e.g. key1=value1&key2=value2…).
+When do you need to create a signature? When you send a request to Skyee and Skyee wants to make sure that the request is indeed from you. The parameters sent with the request are used to create the signature.
+
+1. Presume all data sent is the set M. Sort non-empty values in M in ascending alphabetical order (i.e. lexicographical sequence), and join them into string A via the corresponding URL key-value format (e.g. key1=value1&key2=value2…).
 
     Notes:
 
