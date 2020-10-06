@@ -41,7 +41,7 @@ https://pay.skyeepayment.com/web/pay?merchantId=123&appId=984342&orderId=12345-1
 Parameter | Type | Description 
 --------- | ------- | ----------- |
 merchantId | string |  `required`<br> a unique ID given by Skyee to identify the merchant.
-appId | string | `required`<br> each accommodation company’s ID, issued after KYCC done.
+appId | string | `required`<br> each company may have multiple appID to identify different payment methods/products/scenarios, issued after KYCC done.
 orderId | string | `required` `Maxlength: 32`<br>  the merchant’s order number. It must be unique for the merchant. Alphanumeric, "_" and "-" are allowed.  
 payType | string | `mandatory`<br>  Default is `BankTransfer`.
 orderTime | integer | `required`<br> when is this order created. Unix Timestamp, e.g. 15583942134.
@@ -72,7 +72,7 @@ In the POST, the following parameters will be sent:
 Parameter | Type | Description
 --------- | ------- | ----------- |
 merchantId | string |  `readonly`<br> a unique ID given by Skyee to identify the merchant.
-appId | string | `readonly`<br> each accommodation company’s ID.
+appId | string | `readonly`<br> appID issued to current merchant. 
 orderId | string | `readonly` `Maxlength: 32`<br>  the merchant’s order number.
 payType | string | `readonly`<br> Payment Method
 orderTime | integer | `readonly`<br> when is this order created. Unix Timestamp, e.g. 15583942134.
