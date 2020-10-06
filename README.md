@@ -85,6 +85,13 @@ orderStatus | string |  `readonly`<br> Order Status.
 errorCode  | string |  `readonly`<br> The error code when an error occurs.
 sign | string | Signature encrypted using RSA(SHA1WithRSA) signature. Reference  [verify a signature](#verify-a-signature)
 
+For order status  
+
+* `Paid`: the amount of CNY has been well received.
+* `PaymentFailed`: within 48 hours the payment is not received, please be noted the notification itself may be sent after 48 hours timeframe.
+* `Refund`: for some reason Skyee has to make a refund to the student
+* `Settled`: the payment has been sent to the merchant
+
 ### Create a signature
 
 When do you need to create a signature? When you send a request to Skyee and Skyee wants to make sure that the request is indeed from you. The parameters sent with the request are used to create the signature.
