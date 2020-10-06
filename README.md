@@ -206,7 +206,7 @@ When do you need to create a signature? When you send a request to Skyee and Sky
     amt2: 9484213
     productId: 10000
     orderStatus: Paid
-    errorCode : <br>
+    errorCode :
     sign: CzSlJ6X4nPsP5p36PQYf51a9OJRK6+V65kFwuD4wxeRdeoJZensPCD0YBB3uUlSphbR1RXACfSMXy9nfanbmh8n+dk8mUJiN2G4+Xwd0/HuYQqv9jUMMJT4UkfWO9CARlDrF4dUHDV4U7d4dcb4HjbRFeHyPbK2utWlHGQ1HsjJ6nupW2kxWIZ6MOVu0V5E+OUO1A5qMbjvIm8Etx5nEW/3v+qkH19S66FwjP0bh9HfYBGmA64YZHbc4W+3R5OF16EvGOm8sXNyF+9+IxUmbWrJ/a5GP6y8wvI6b7TZorjD1ss41Xuvuow0dtdwbXZn8ZPHcyxz2bdssh5ha9UEP7g==
 
     ```
