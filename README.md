@@ -111,15 +111,15 @@ When do you need to create a signature? When you send a request to Skyee and Sky
 
     For the following transferred parameters:
 
-    merchantId：1000000000 <br>
-    appId：10000100 <br>
-    orderId： 12345-12345767-12345677 <br>
-    orderTime：15583942134 <br>
-    c1：GBP <br>
-    amt1：1023111 <br>
+    merchantId：1000000000
+    appId：10000100
+    orderId： 12345-12345767-12345677
+    orderTime：15583942134
+    c1：GBP
+    amt1：1023111
     c2: CNY <br>
-    amt2: 9484213 <br>
-    productId: 10000 <br>
+    amt2: 9484213
+    productId: 10000
     notificationUrl: https://merchant.com
 
     ```
@@ -195,17 +195,17 @@ When do you need to create a signature? When you send a request to Skyee and Sky
 
     For the following transferred parameters:
 
-    merchantId：1000000000 <br>
-    appId：10000100 <br>
-    orderId： 12345-12345767-12345677 <br>
-    payType: BankTransfer <br>
-    orderTime：15583942134 <br>
-    c1：GBP <br>
-    amt1：1023111 <br>
-    c2: CNY <br>
-    amt2: 9484213 <br>
-    productId: 10000 <br>
-    orderStatus: Paid <br>
+    merchantId：1000000000
+    appId：10000100
+    orderId： 12345-12345767-12345677
+    payType: BankTransfer
+    orderTime：15583942134
+    c1：GBP
+    amt1：1023111
+    c2: CNY
+    amt2: 9484213
+    productId: 10000
+    orderStatus: Paid
     errorCode : <br>
     sign: CzSlJ6X4nPsP5p36PQYf51a9OJRK6+V65kFwuD4wxeRdeoJZensPCD0YBB3uUlSphbR1RXACfSMXy9nfanbmh8n+dk8mUJiN2G4+Xwd0/HuYQqv9jUMMJT4UkfWO9CARlDrF4dUHDV4U7d4dcb4HjbRFeHyPbK2utWlHGQ1HsjJ6nupW2kxWIZ6MOVu0V5E+OUO1A5qMbjvIm8Etx5nEW/3v+qkH19S66FwjP0bh9HfYBGmA64YZHbc4W+3R5OF16EvGOm8sXNyF+9+IxUmbWrJ/a5GP6y8wvI6b7TZorjD1ss41Xuvuow0dtdwbXZn8ZPHcyxz2bdssh5ha9UEP7g==
 
